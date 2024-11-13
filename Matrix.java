@@ -38,7 +38,7 @@ public class Matrix {
     for (int width = 0; width < size; width++) {
       for (int height = 0; height < size; height++) {
         if(width + height = size-1){
-          System.out.println(YELLOW +(matrix[width][height])+RESET+(matrix[width][height]));
+          System.out.println(YELLOW +(matrix[width][height])+ RESET+(matrix[width][height]));
         } else {
           System.out.print(matrix[width][height] + "\t");
         }
