@@ -2,8 +2,9 @@ public class Matrix {
 
   final String YELLOW = "\u001b[33m";
   final String RESET = "  ";
-
+  int size;
   //Creating the matrix field
+
   int[][] matrix;
 
   /**
@@ -12,10 +13,6 @@ public class Matrix {
    * @param size
    */
   public Matrix(int size) {
-    int width = size;
-    int height = size;
-    matrix = new int[size][size];
-
     System.out.println(" Your matrix is" + size + "X" + size + " ");
   }
 
@@ -38,8 +35,8 @@ public class Matrix {
    * Printing matrix, with highlighted diagonal elements
    */
   public static void printMatrix(){
-    for (width = 0; width < size; width++) {
-      for (height = 0; height < size; height++) {
+    for (int width = 0; width < size; width++) {
+      for (int height = 0; height < size; height++) {
         if(width + height = size-1){
           System.out.println(YELLOW +(matrix[width][height])+RESET+(matrix[width][height]));
         } else {
@@ -58,8 +55,8 @@ public class Matrix {
     //populating matrix with default values
     System.out.println("Printing matrix with default values ");
 
-    for (width = 0; width < size; width++) {
-      for (height = 0; height < size; height++) {
+    for (int width = 0; width < size; width++) {
+      for (int height = 0; height < size; height++) {
         matrix[width][height] = (width * 0) + (height * 0);
       }
     }
@@ -72,8 +69,8 @@ public class Matrix {
 
     int counter = 1;
 
-    for (width = 0; width < size; width++) {
-      for (height = 0; height < size; height++) {
+    for (int width = 0; width < size; width++) {
+      for (int height = 0; height < size; height++) {
         matrix[width][height] = counter++;
       }
     }
@@ -82,7 +79,7 @@ public class Matrix {
     // diagonal (from top right to bottom left) with the other side
     // leaving the diagonal elements untouched.
 
-    public static void flipMatrix() {
+  public static flipMatrix() {
       System.out.println("Flipping matrix.....matrix flipped");
       System.out.println("Printing flipped matrix");
 
