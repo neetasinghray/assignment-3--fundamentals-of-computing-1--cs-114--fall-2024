@@ -5,6 +5,7 @@ public class RunMatrix {
 
     final int[][] matrix = new int[width][height];
     final String YELLOW = "\u001b[33m";
+    final String RESET = "  ";
 
     //prompt the user to obtain the size of the matrix
     System.out.println("Please enter the size of your matrix : ");
@@ -18,7 +19,7 @@ public class RunMatrix {
 
     myMatrix.populateMatrix(matrix);
 
-    myMatrix.printMatrix(Matrix);
+    myMatrix.printMatrix(matrix);
 
     myMatrix.flipMatrix(matrix);
 
