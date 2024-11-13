@@ -1,28 +1,24 @@
-
-import org.fusesource.AnsiConsole;
-import static org.fusource.jansi.Ansi.*;
-import static org.fusesource.jansi.Ansi.color.*;
-
 import java.util.Scanner;
 
 public class RunMatrix {
   public static void main(String[] args) {
-    AnsiConsole.systemInstall();
 
-    Matrix myMatrix = new Matrix(size);
+    final int[][] matrix = new int[width][height];
+    final String YELLOW = "\u001b[33m";
 
-    // prompt the user to obtain the size of the matrix
+    //prompt the user to obtain the size of the matrix
     System.out.println("Please enter the size of your matrix : ");
     Scanner input = new Scanner(System.in);
     int size = input.nextInt();
+    Matrix myMatrix = new Matrix(size);
     if(size > 0){
       System.out.println("Valid entry ! proceed");
 
-    System.out.println(myMatrix.size);
+    myMatrix.Matrix(size);
 
     myMatrix.populateMatrix(matrix);
 
-    myMatrix.printMatrix(matrix);
+    myMatrix.printMatrix(Matrix);
 
     myMatrix.flipMatrix(matrix);
 
@@ -30,12 +26,8 @@ public class RunMatrix {
     }
       else{
         System.out.println(" Sorry invalid entry ! Try again");
+        System.out.println("Please enter the size of your matrix : ");
       }
-
-
     input.close();
-
-//Restore default console bheavior
-   AnsiConsole.systemUninstall();
   }
 }
