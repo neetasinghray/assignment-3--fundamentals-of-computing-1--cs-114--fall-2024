@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class RunMatrix {
   public static void main(String[] args) {
 
-    final int[][] matrix = new int[width][height];
+    final int[][] matrix;
     final String YELLOW = "\u001b[33m";
     final String RESET = "  ";
 
